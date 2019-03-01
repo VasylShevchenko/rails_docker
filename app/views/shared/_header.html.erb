@@ -1,0 +1,21 @@
+<div class="slim-header">
+  <div class="container">
+    <div class="slim-header-left">
+    </div><!-- slim-header-left -->
+    <div class="slim-header-right">
+      <div class="dropdown dropdown-c">
+        <a href="#" class="logged-user" data-toggle="dropdown">
+          <img src="http://via.placeholder.com/500x500" alt="">
+          <span><%= current_user.first_name + ' ' + current_user.last_name  %></span>
+          <i class="fa fa-angle-down"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <nav class="nav">
+            <%= link_to current_user.email, '#', class: 'nav-link'  %>
+            <%= link_to 'Log out', logout_path, class: 'nav-link'  %>
+          </nav>
+        </div><!-- dropdown-menu -->
+      </div><!-- dropdown -->
+    </div><!-- header-right -->
+  </div><!-- container -->
+</div>

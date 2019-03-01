@@ -1,0 +1,27 @@
+<div class="signin-wrapper">
+
+  <div class="signin-box">
+    <h2 class="signin-title-primary">Welcome back!</h2>
+    <h3 class="signin-title-secondary">Sign in to continue.</h3>
+
+    <%= form_tag sessions_path do %>
+      <div class="form-group">
+        <%= email_field_tag :email, params[:email], class: 'form-control', placeholder: 'Enter your email', required: true %>
+      </div>
+
+      <div class="form-group mg-b-30">
+        <%= password_field_tag :password, nil, class: 'form-control', placeholder: 'Enter your password', required: true %>
+      </div>
+
+      <div class="field">
+        <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+        <%= label_tag :remember_me %>
+      </div>
+
+      <%= submit_tag 'Sign In', class: 'btn btn-primary btn-block btn-signin' %>
+    <% end %>
+
+    <p class="mg-b-0">Don't have an account? <%= link_to 'Sign Up', signup_path %></p>
+
+  </div>
+</div>
