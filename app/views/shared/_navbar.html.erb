@@ -1,0 +1,18 @@
+<div class="slim-navbar">
+  <div class="container">
+    <ul class="nav">
+      <li class="nav-item <%= add_active_class(root_path) %>">
+        <%= link_to root_path, class: "nav-link" do %>
+          <i class="icon ion-ios-home"></i>
+          <span>Dashboard</span>
+        <% end %>
+      </li>
+      <li class="nav-item <%= add_active_class(secret_path) %>">
+        <%= link_to secret_path, class: "nav-link" do %>
+          <i class="icon ion-calculator"></i>
+          <span>Secret page</span>
+        <% end %>
+      </li>
+    </ul>
+  </div><!-- container -->
+</div><!-- slim-navbar -->

@@ -10,7 +10,8 @@
 
   <body>
   <%= render 'shared/flash' %>
-  <%= render 'shared/header' if current_user.present? %>
+  <%= render 'shared/header' if logged_in? %>
+  <%= render 'shared/navbar' %>
 
   <div class="slim-mainpanel">
       <div class="container">

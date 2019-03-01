@@ -6,4 +6,8 @@ module ApplicationHelper
      alert: 'alert-danger',
     }[flash_type.to_sym] || flash_type.to_s
   end
+
+  def add_active_class(current_page)
+    'active' if request.path == current_page
+  end
 end
